@@ -29,7 +29,14 @@ export default function SummonerPage() {
         loading: matchesLoading,
         err: matchesErr,
         refresh: refreshMatches,
-    } = useRecentMatches(data?.puuid, platformToRouting(data?.region),{take: 25, concurrency: 3});
+    } = useRecentMatches(
+        data?.puuid,
+        {
+            routingRegion: platformToRouting(data?.region),
+            take: 25,
+            concurrency: 3,
+        }
+    );
     const ddVersion = useMemo(() => {
         const gv = matches?.[0]?.match?.gameVersion; //
         if (!gv) return "16.2.1"; // fallback por si aún no llegan matches
