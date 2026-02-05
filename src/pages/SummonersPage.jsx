@@ -154,7 +154,7 @@ export default function SummonerPage() {
                             <div className="mt-2 flex items-center justify-between">
                                 <div>
                                     <div className="text-lg font-semibold text-white">Solo Queue</div>
-                                    <div className="text-lg font-semibold text-white">{soloQ?.tier} </div>
+                                    <div className="text-lg font-semibold text-white">{soloQ?.tier} {soloQ?.rank} </div>
 
                                     <div className="text-sm text-white/60">{soloQ?.leaguePoints} LP</div>
                                 </div>
@@ -183,7 +183,7 @@ export default function SummonerPage() {
                             <div className="mt-2 flex items-center justify-between">
                                 <div>
                                     <div className="text-lg font-semibold text-white">Flex Queue</div>
-                                    <div className="text-lg font-semibold text-white">{flexQ?.tier} </div>
+                                    <div className="text-lg font-semibold text-white">{flexQ?.tier} {flexQ?.rank}</div>
 
                                     <div className="text-sm text-white/60">{flexQ?.leaguePoints} LP</div>
                                 </div>
