@@ -1,16 +1,10 @@
-# React + Vite
+# Elo-Braker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1920" height="1080" alt="Desktop Screenshot 2026 02 04 - 22 30 55 65" src="https://github.com/user-attachments/assets/aafc8ce0-74bd-4ec0-b3d7-51a7e2f8013f" />
 
-Currently, two official plugins are available:
+A web application that displays ranked information and match history for League of Legends players.  
+It provides key performance metrics such as KDA, win rate, current rank, and recent match results using data from the Riot Games API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1920" height="1080" alt="Desktop Screenshot 2026 02 04 - 22 32 42 14" src="https://github.com/user-attachments/assets/11234e85-1e58-4d22-a7e2-9deb2fccb453" />
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
