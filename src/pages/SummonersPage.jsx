@@ -5,7 +5,8 @@ import {useRecentMatches} from "../hooks/useRecentMatches";
 import {useDdragonChampions, championIconUrl, itemIconUrl, itemsUrl} from "../hooks/useDdragon";
 import {getSummonerEntries} from "../hooks/useSummonerRanks.js"
 import timeago from 'epoch-timeago';
-import {rankIconSrc} from "/src/constants/index.js"
+import {rankIconSrc,platformToRouting} from "/src/constants/index.js"
+
 import {
     Card,
     CardHeader,
@@ -28,7 +29,7 @@ export default function SummonerPage() {
         loading: matchesLoading,
         err: matchesErr,
         refresh: refreshMatches,
-    } = useRecentMatches(data?.puuid, {take: 25, concurrency: 3});
+    } = useRecentMatches(data?.puuid, platformToRouting(data?.region),{take: 25, concurrency: 3});
     const ddVersion = useMemo(() => {
         const gv = matches?.[0]?.match?.gameVersion; //
         if (!gv) return "16.2.1"; // fallback por si aún no llegan matches
@@ -52,7 +53,6 @@ export default function SummonerPage() {
 
         getSummonerEntries(data.puuid, data.region)
             .then(res => {
-                console.log(res);
                 setRankData(res)
 
             })
@@ -77,7 +77,7 @@ export default function SummonerPage() {
                         onClick={() => {
                             refresh();
                             refreshMatches();
-
+                            console.log(platformToRouting(data?.region))
                         }}
                         disabled={loading || matchesLoading}
                         className="rounded-md bg-white/10 hover:bg-white/15 border border-white/10 px-3 py-2 text-sm disabled:opacity-50"
