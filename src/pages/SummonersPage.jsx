@@ -516,6 +516,9 @@ function queueLabel(queueId) {
             return "ARAM";
         case 700:
             return "Clash";
+        case 1700:
+            return "Arena";
+
         default:
             return `Queue ${queueId}`;
     }
